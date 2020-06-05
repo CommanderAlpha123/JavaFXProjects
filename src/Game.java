@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -87,7 +81,6 @@ public class Game extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
 
-		// Set title and icon for the window
 		primaryStage.setTitle("Hungry Serpent");
 
 		InputStream image = Files.newInputStream(Paths.get("Res/ICON.png"));
@@ -96,11 +89,6 @@ public class Game extends Application {
 		
 		primaryStage.getIcons().add(img0);
 		primaryStage.show();
-
-		// Song has entered the public domain (Sergei Rachmaninoff d. 1943)
-		// https://www.youtube.com/watch?v=F7a9K4lvVn8, edited using Audacity
-		// Music By Sergei Rachaminoff Piano Concerto No. 1 in F-Sharp Minor
-		// Mr. Patel: For your reference only
 		
 		String path = "src/Concerto.mp3";
 		Media media = new Media(new File(path).toURI().toString());
@@ -462,8 +450,7 @@ public class Game extends Application {
 		}
 
 	}
-	//Nice little tutorial: https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm
-
+	
 	public static void tick(GraphicsContext gc) {
 		//gameover to stop timer, and display the gameover scene (check start method)
 		if (gameOver) {
@@ -605,8 +592,6 @@ public class Game extends Application {
 		score++;
 	}
 
-	//using the class and method to make all MenuButtons be the same. Same style. 
-	//Refer to this: https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm
 	private static class MenuButton extends StackPane {
 		public Text text;
 
